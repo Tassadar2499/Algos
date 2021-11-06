@@ -1,12 +1,16 @@
 ﻿namespace MakTasks
 {
-	public class AvlTree
+	public class AvTree
 	{
 		public Node Root { get; private set; }
 
-		public AvlTree(int key)
+		public AvTree(Node root)
 		{
-			Root = new Node(key);
+			Root = root;
+		}
+
+		public AvTree(int key) : this(new Node(key))
+		{
 		}
 
 		public void Insert(int key)
